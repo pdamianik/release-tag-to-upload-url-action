@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(733);
+/******/ 		return __webpack_require__(167);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -2075,6 +2075,27 @@ function withCustomRequest(customRequest) {
 exports.graphql = graphql$1;
 exports.withCustomRequest = withCustomRequest;
 //# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 167:
+/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
+
+const core = __webpack_require__(498);
+const github = __webpack_require__(181);
+
+try {
+	const tag = core.getInput("tag");
+	let release = github.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
+		owner: github.context.repo.owner,
+		repo: github.context.repo.repo,
+		tag: tag
+	});
+	core.setOutput('uploadUrl', release);
+} catch (error) {
+	core.setFailed(error.message);
+}
 
 
 /***/ }),
@@ -4758,27 +4779,6 @@ restEndpointMethods.VERSION = VERSION;
 
 exports.restEndpointMethods = restEndpointMethods;
 //# sourceMappingURL=index.js.map
-
-
-/***/ }),
-
-/***/ 733:
-/***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
-
-const core = __webpack_require__(498);
-const github = __webpack_require__(181);
-
-try {
-	const tag = core.getInput("tag");
-	let release = github.getOctokit.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
-		owner: github.context.repo.owner,
-		repo: github.context.repo.repo,
-		tag: tag
-	});
-	core.setOutput('uploadUrl', release);
-} catch (error) {
-	core.setFailed(error.message);
-}
 
 
 /***/ }),
