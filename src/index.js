@@ -2,7 +2,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 try {
-	const tag = core.getInput("tag");
+	const tag = core.getInput("tag").replace('refs/tags/', '');
 	const token = core.getInput("token");
 
 	const oktokit = github.getOctokit(token);

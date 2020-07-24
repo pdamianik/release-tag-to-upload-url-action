@@ -2086,7 +2086,7 @@ const core = __webpack_require__(498);
 const github = __webpack_require__(181);
 
 try {
-	const tag = core.getInput("tag");
+	const tag = core.getInput("tag").replace('refs/tags/', '');
 	const token = core.getInput("token");
 
 	const oktokit = github.getOctokit(token);
