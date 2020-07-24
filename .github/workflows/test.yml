@@ -1,16 +1,16 @@
 on: [release]
 
 jobs:
-	test:
-		runs-on: ubuntu-latest
-		name: A job to test the action
-		steps:
-			- name: Checkout
-				uses: actions/checkout@v2
-			- name: Try to resolve the tag to a upload url
-				id: resolver
-				uses: ./
-				with:
-					tag: v1.0
-			- name: Get the result
-				run: echo ${{ steps.resolver.ouputs.uploadUrl }}
+  test:
+    runs-on: ubuntu-latest
+    name: A job to test the action
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Try to resolve the tag to a upload url
+        id: resolver
+        uses: ./
+        with:
+          tag: v1.0
+      - name: Get the result
+        run: echo ${{ steps.resolver.ouputs.uploadUrl }}
