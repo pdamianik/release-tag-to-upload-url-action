@@ -1,0 +1,24 @@
+{
+	"name": "release-tag-to-upload-url-action",
+	"version": "1.0.0",
+	"description": "A js action that converts a release tag to the corresponding asset upload url",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pdamianik/release-tag-to-upload-url-action.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pdamianik/release-tag-to-upload-url-action/issues"
+	},
+	"homepage": "https://github.com/pdamianik/release-tag-to-upload-url-action#readme",
+	"dependencies": {
+		"@actions/core": "^1.2.4",
+		"@actions/github": "^4.0.0"
+	}
+}
