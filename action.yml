@@ -4,6 +4,9 @@ inputs:
   tag:
     description: 'The release tag'
     required: true
+  token:
+    description: 'The github api token'
+    required: true
 outputs:
   uploadUrl:
     description: 'The upload url for the release with the passed tag'
