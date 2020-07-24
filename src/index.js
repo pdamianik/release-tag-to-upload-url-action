@@ -7,8 +7,15 @@ try {
 
 	const oktokit = github.getOctokit(token);
 
+	const owner = github.context.repo.owner;
+	const repo = github.context.repo.repo;
+
 	let release;
-	oktokit.repos.getReleaseByTag(tag).then((value) => release = value).catch((reason) => core.setFailed(reason));
+	oktokit.repos.getReleaseByTag({
+		owner,
+		repo,
+		tag
+	}).then((value) => release = value).catch((reason) => core.setFailed(reason));
 	// let release = github.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
 	// 	owner: github.context.repo.owner,
 	// 	repo: github.context.repo.repo,
