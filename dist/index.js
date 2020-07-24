@@ -2092,7 +2092,7 @@ try {
 	const oktokit = github.getOctokit(token);
 
 	let release;
-	oktokit.repos.getReleaseByTag(tag).then((value) => release = value);
+	oktokit.repos.getReleaseByTag(tag).then((value) => release = value).catch((reason) => core.setFailed(reason));
 	// let release = github.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
 	// 	owner: github.context.repo.owner,
 	// 	repo: github.context.repo.repo,
