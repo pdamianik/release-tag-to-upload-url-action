@@ -1,12 +1,12 @@
 name: 'Release tag to upload url'
 description: 'The title says it all'
 inputs:
-	tag:
-		description: 'The release tag'
-		required: true
+  tag:
+    description: 'The release tag'
+    required: true
 outputs:
-	uploadUrl:
-		description: 'The upload url for the release with the passed tag'
+  uploadUrl:
+    description: 'The upload url for the release with the passed tag'
 runs:
-	using: 'node12'
-	main: 'dist/index.js'
+  using: 'node12'
+  main: 'dist/index.js'
