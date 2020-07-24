@@ -11,6 +11,7 @@ jobs:
         id: resolver
         uses: ./
         with:
-          tag: v1.0
+          tag: ${{ github.ref }}
+          token: ${{ github.token }}
       - name: Get the result
         run: echo ${{ steps.resolver.ouputs.uploadUrl }}
