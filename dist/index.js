@@ -2109,6 +2109,7 @@ try {
 	// 	repo: github.context.repo.repo,
 	// 	tag: tag
 	// });
+	console.log(`relese ${release}`);
 	core.setOutput('uploadUrl', release);
 } catch (error) {
 	core.setFailed(error.message);
