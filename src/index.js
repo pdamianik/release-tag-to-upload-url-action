@@ -21,6 +21,7 @@ try {
 	// 	repo: github.context.repo.repo,
 	// 	tag: tag
 	// });
+	console.debug(release);
 	core.setOutput('uploadUrl', release);
 } catch (error) {
 	core.setFailed(error.message);
