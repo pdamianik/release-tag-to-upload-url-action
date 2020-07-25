@@ -2087,12 +2087,16 @@ const github = __webpack_require__(181);
 
 try {
 	const tag = core.getInput("tag").replace('refs/tags/', '');
+	console.log("tag: ${tag}");
 	const token = core.getInput("token");
+	console.log("token: ${token}");
 
 	const oktokit = github.getOctokit(token);
 
 	const owner = github.context.repo.owner;
+	console.log("owner: ${owner}");
 	const repo = github.context.repo.repo;
+	console.log("repo: ${repo}")
 
 	var release = "test";
 	oktokit.repos.getReleaseByTag({
