@@ -14,19 +14,16 @@ try {
 	const repo = github.context.repo.repo;
 	console.log(`repo: ${repo}`)
 
-	var release = "test";
 	oktokit.repos.getReleaseByTag({
 		owner,
 		repo,
 		tag
-	}).then((value) => release = value.data.upload_url).catch((reason) => core.setFailed(reason));
+	}).then((value) => core.setOutput('uploadUrl', value.data.upload_url)).catch((reason) => core.setFailed(reason));
 	// let release = github.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
 	// 	owner: github.context.repo.owner,
 	// 	repo: github.context.repo.repo,
 	// 	tag: tag
 	// });
-	console.log(`relese ${release}`);
-	core.setOutput('uploadUrl', release);
 } catch (error) {
 	core.setFailed(error.message);
 }
