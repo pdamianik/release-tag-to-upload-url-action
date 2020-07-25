@@ -25,7 +25,7 @@ The upload url for the release
 ### In response to a release triggered event
 
 ```yaml
-uses: pdamianik/release-tag-to-upload-url-action@v1.0
+uses: pdamianik/release-tag-to-upload-url-action@v1.0.1
 with:
   tag: ${{ github.ref }}
   token: ${{ github.token }}
@@ -33,7 +33,7 @@ with:
 
 ### Generally 
 ```yaml
-uses: pdamianik/release-tag-to-upload-url-action@v1.0
+uses: pdamianik/release-tag-to-upload-url-action@v1.0.1
 with:
   tag: v1.0
   token: ${{ github.token }}
