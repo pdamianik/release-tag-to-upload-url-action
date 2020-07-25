@@ -2104,7 +2104,7 @@ try {
 		tag
 	}).then((value) => {
 		core.setOutput('uploadUrl', value.data.upload_url);
-		console.log(value.data.upload_url);
+		console.log('uploadUrl: ' + value.data.upload_url.replace('{?name,label}', ''));
 	}).catch((reason) => core.setFailed(reason));
 } catch (error) {
 	core.setFailed(error.message);
