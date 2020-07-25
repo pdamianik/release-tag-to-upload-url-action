@@ -1,5 +1,7 @@
 # Release tag to upload url
 
+![.github/workflows/tests](https://github.com/pdamianik/release-tag-to-upload-url-action/workflows/.github/workflows/test.yml/badge.svg?branch=v1.0.1)
+
 A js action that converts a release tag to the corresponding asset upload url
 
 ## Inputs
