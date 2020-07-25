@@ -1,5 +1,7 @@
 name: 'Release tag to upload url'
 description: 'The title says it all'
+icon: book
+color: gray-dark
 inputs:
   tag:
     description: 'The release tag'
