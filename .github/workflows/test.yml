@@ -7,11 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Try to resolve the tag to a upload url
-        id: resolver
+      - id: resolver
         uses: ./
         with:
           tag: ${{ github.ref }}
           token: ${{ github.token }}
       - name: Get the result
-        run: echo ${{ steps.resolver.ouputs.uploadUrl }}
+        run: echo ${{ steps.resolver.outputs.uploadUrl }}
