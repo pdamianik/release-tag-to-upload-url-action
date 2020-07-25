@@ -2094,7 +2094,7 @@ try {
 	const owner = github.context.repo.owner;
 	const repo = github.context.repo.repo;
 
-	var release;
+	var release = "test";
 	oktokit.repos.getReleaseByTag({
 		owner,
 		repo,
