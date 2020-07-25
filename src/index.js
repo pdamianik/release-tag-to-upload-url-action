@@ -18,12 +18,10 @@ try {
 		owner,
 		repo,
 		tag
-	}).then((value) => core.setOutput('uploadUrl', value.data.upload_url)).catch((reason) => core.setFailed(reason));
-	// let release = github.request('GET /repos/{owner}/{repo}/releases/tags/{tag}', {
-	// 	owner: github.context.repo.owner,
-	// 	repo: github.context.repo.repo,
-	// 	tag: tag
-	// });
+	}).then((value) => {
+		core.setOutput('uploadUrl', value.data.upload_url);
+		console.log(value.data.upload_url);
+	}).catch((reason) => core.setFailed(reason));
 } catch (error) {
 	core.setFailed(error.message);
 }
