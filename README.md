@@ -4,6 +4,11 @@
 
 A js action that converts a release tag to the corresponding asset upload url
 
+Btw. this repo has become useless because:
+
+1. There is a native way to do it (see [The repo where this action would have been used](https://github.com/RiedleroD/DodgeToDrums/blob/26c9df7f079846c465891d96c6c5bd7c3c9013cc/.github/workflows/build.yml#L34))
+2. I found a repo with exactly the same action as the one I coded in this repo (although I heavily researched to find a way to do this before I created this action; also the other repo is way older than mine, but I forgot the name and url)
+
 ## Inputs
 
 ### `tag`
