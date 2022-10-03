@@ -1,4 +1,4 @@
-# Release tag to upload url
+# Release tag to upload url - DEPRECATED
 
 [![latest-test](https://github.com/pdamianik/release-tag-to-upload-url-action/workflows/.github/workflows/test.yml/badge.svg?branch=v1.0.1)](https://github.com/pdamianik/release-tag-to-upload-url-action/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
 [![latest-release](https://img.shields.io/github/v/release/pdamianik/release-tag-to-upload-url-action?label=latest-release)](https://github.com/pdamianik/release-tag-to-upload-url-action/releases/latest)
